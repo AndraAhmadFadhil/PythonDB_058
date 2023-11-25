@@ -44,43 +44,9 @@ def prediksi_fakultas():
     conn.commit()
     conn.close()
 
-# Fungsi untuk menambahkan data ke database
-# def submit_nilai(nama_siswa, biologi, fisika, inggris):
-#     prediksi = prediksi_fakultas(biologi, fisika, inggris)
-    
-#     # Menyimpan data ke SQLite
-#     conn = sqlite3.connect("PythonDB_20220140067.db")
-#     cursor = conn.cursor()
-    
-#     # Mengecek apakah tabel sudah ada, jika belum membuatnya
-#     cursor.execute('''CREATE TABLE IF NOT EXISTS nilai_siswa (
-#                         id INTEGER PRIMARY KEY AUTOINCREMENT,
-#                         nama_siswa TEXT,
-#                         biologi INTEGER,
-#                         fisika INTEGER,
-#                         inggris INTEGER,
-#                         prediksi_fakultas TEXT)''')
-    
-#     # Menambahkan data ke tabel
-#     cursor.execute("INSERT INTO nilai_siswa (nama_siswa, biologi, fisika, inggris, prediksi_fakultas) VALUES (?, ?, ?, ?, ?)",
-#                    (nama_siswa, biologi, fisika, inggris, prediksi))
-    
-#     # Commit perubahan dan menutup koneksi
-#     conn.commit()
-#     conn.close()
-
-# Fungsi yang dipanggil saat tombol submit ditekan
-# def submit_button():
-    # nama_siswa = entry_nama.get()
-    # nilai_biologi = int(entry_biologi.get())
-    # nilai_fisika = int(entry_fisika.get())
-    # nilai_inggris = int(entry_inggris.get())
-    
-    # submit_nilai(nama_siswa, nilai_biologi, nilai_fisika, nilai_inggris)
-    # label_hasil.config(text=f"Hasil prediksi: {prediksi_fakultas(nilai_biologi, nilai_fisika, nilai_inggris)}")
-
 root =Tk()
 root.title("Aplikasi Prediksi Fakultas")
+
 
 # Label dan Entry untuk Nama Siswa
 label_nama = ttk.Label(root, text="Nama Siswa:")
